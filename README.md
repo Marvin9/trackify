@@ -46,7 +46,7 @@ router.all('*', (request, response, next) => {
 
 ### tracker.error(new Error(error:object))
 ```javascript
-fs.readFile(''noexist.txt', (err) => {
+fs.readFile('noexist.txt', (err) => {
   if(err) tracker.error(new Error(err));
 });
 ```
