@@ -1,6 +1,6 @@
 {
   "name": "trackify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Logs activity(routes, db, custom) of application in a file",
   "main": "tracker.js",
   "keywords": [
@@ -9,5 +9,6 @@
     "log-file"
   ],
   "author": "mayursiinh <mayursiinh@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "Marvin9/trackify"
 }
