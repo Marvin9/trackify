@@ -1,6 +1,9 @@
 # trackify
 npm package to track activities of request, database, error or custom. Log all in txt file with timestamp.
 
+![npm](https://img.shields.io/npm/v/trackify)
+![GitHub repo size](https://img.shields.io/github/repo-size/Marvin9/trackify?color=green)
+
 ## Installation
 ```
 npm install koa
