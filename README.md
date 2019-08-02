@@ -6,7 +6,7 @@ npm package to track activities of request, database, error or custom. Log all i
 
 ## Installation
 ```
-npm install koa
+npm install trackify
 ```
 
 ## Initialization
