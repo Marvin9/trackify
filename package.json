@@ -1,0 +1,13 @@
+{
+  "name": "trackify",
+  "version": "1.0.0",
+  "description": "Logs activity(routes, db, custom) of application in a file",
+  "main": "tracker.js",
+  "keywords": [
+    "logger",
+    "tracker",
+    "log-file"
+  ],
+  "author": "mayursiinh <mayursiinh@gmail.com>",
+  "license": "MIT"
+}
