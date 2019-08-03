@@ -127,7 +127,7 @@ con.query(sql, (err, result) => {
 ### tracker.custom(log:string, type:string) 
 ```javascript
 setTimeout(() => {
-  tracker.custome("5 second passed.", "Custom time tracking");
+  tracker.custom("5 second passed.", "Custom time tracking");
 }, 5000);
 ```
 * You are free to logs your custom things :)
