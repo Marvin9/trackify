@@ -4,10 +4,22 @@ npm package to track activities of request, database, error or custom. Log all i
 ![npm](https://img.shields.io/npm/v/trackify)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Marvin9/trackify?color=green)
 
+## [See demo of logs.txt file](https://github.com/Marvin9/trackify/tree/master/test)
+
 ## Installation
 ```
 npm install trackify
 ```
+
+## Update 
+
+* Version 1.1.0
+  * Change in naming convention.
+    * `tracker.db_connection() -> tracker.db()`
+    * `tracker.nosqldb_query() -> tracker.nosql_query()`
+    * `tracker.relational_db_query() -> tracker.relational_query()`
+  * Change in argument passing in Init.
+    * `new trackify({infinity_ : true}) -> new trackify({app_name : "Your app name", infinity_ : true})`
 
 ## Initialization
 ```javascript
@@ -18,9 +30,10 @@ const trackify = require('trackify');
 
 ### Init
 ```javascript
-const tracker = new trackify({infinity_ : true});
+const tracker = new trackify({app_name : "Your app name",infinity_ : true});
 ```
 * It creates `logs.txt` in root folder.
+* `{app_name : string}` (default "App")
 * `{infinity_ : boolean}`(default false)
   * `false` : Clear previous records of file and write new records.
   * `true` : Don't clear previous records of file.
@@ -57,7 +70,7 @@ fs.readFile('noexist.txt', (err) => {
 * It logs error and exit app.
 * Whenever you need to use `throw new Error(err)`, use this function.
 
-### tracker.db_connection(dbname:string)
+### tracker.db(dbname:string)
 ```javascript
 MongoClient.connect(url, (err, db) => {
   if(err) tracker.error(new Error(err));
@@ -67,7 +80,7 @@ MongoClient.connect(url, (err, db) => {
   
 });
 ```
-### tracker.nosqldb_query(table_name:string, operation:string, value:object, value_updated:object)
+### tracker.nosql_query(table_name:string, operation:string, value:object, value_updated:object)
 ```javascript
 //select
 let unique_key = {_id : "unique"};
@@ -112,7 +125,7 @@ db.insert(delete_this, (err) => {
   * `value` : key which is being operated on table.
   * `value_updated` : in case of `update` this argument should be passed.
   
-### tracker.relational_db_query(table_name:string, operation:string, query:string)
+### tracker.relational_query(table_name:string, operation:string, query:string)
 ```javascript
 const sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 con.query(sql, (err, result) => {
