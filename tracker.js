@@ -26,9 +26,9 @@ const fs = require('fs');
 
 class tracker {
 
-    constructor(app_name = "App", inf = {infinity_ : false}) {
+    constructor(config = {app_name : "App", infinity_ : false}) {
         // console.time("Constr time");
-        this.project_name = app_name;
+        this.project_name = config.app_name;
         this.json_log = {
             name : this.project_name,
             start : tracker.generate_string_timestamp(),
@@ -38,7 +38,7 @@ class tracker {
 
         let log = tracker.generate_string_timestamp() + " " + this.project_name + "\r\n";
 
-        if(inf.infinity_)
+        if(config.infinity_)
             tracker.append_file('\r\n'+log);
         else
             this.write_file(log+'\r\n');
