@@ -116,7 +116,7 @@ db.insert(delete_this, (err) => {
 ```javascript
 const sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 con.query(sql, (err, result) => {
-  if(err) tracker.error(err);
+  if(err) tracker.error(new Error(err));
   tracker.relational_db_query("customers", "insert", sql);
 });
 ```
