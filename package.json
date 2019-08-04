@@ -1,6 +1,6 @@
 {
   "name": "trackify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Logs activity(routes, db, custom) of application in a file",
   "main": "tracker.js",
   "keywords": [

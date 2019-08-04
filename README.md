@@ -74,7 +74,7 @@ fs.readFile('noexist.txt', (err) => {
 ```javascript
 MongoClient.connect(url, (err, db) => {
   if(err) tracker.error(new Error(err));
-  tracker.db_connection("MongoDB");
+  tracker.db("MongoDB");
   
   // your code
   
@@ -87,7 +87,7 @@ let unique_key = {_id : "unique"};
 db.find(unique_key, (err, doc) => {
   if(err) tracker.error(new Error(err));
   
-  tracker.nosqldb_query("tablename", "select", unique_key); //two arguments
+  tracker.nosql_query("tablename", "select", unique_key); //two arguments
   
 });
 
@@ -97,7 +97,7 @@ let to = {val : "updated value"};
 db.update(from, to, (err, doc) => {
   if(err) tracker.error(new Error(err));
   
-  tracker.nosqldb_query("tablename", "update", from, to); // three arguments
+  tracker.nosql_query("tablename", "update", from, to); // three arguments
   
 });
 
@@ -106,7 +106,7 @@ let insert_this = {_id : "uniqueid", name : "mayursinh"};
 db.insert(insert_this, (err) => {
   if(err) tracker.error(new Error(err));
   
-  tracker.nosqldb_query("tablename", "insert", insert_this);
+  tracker.nosql_query("tablename", "insert", insert_this);
   
 });
 
@@ -115,7 +115,7 @@ let delete_this = {_id : "uniqueid"};
 db.insert(delete_this, (err) => {
   if(err) tracker.error(new Error(err));
   
-  tracker.nosqldb_query("tablename", "delete", delete_this);
+  tracker.nosql_query("tablename", "delete", delete_this);
   
 });
 ```
@@ -130,7 +130,7 @@ db.insert(delete_this, (err) => {
 const sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 con.query(sql, (err, result) => {
   if(err) tracker.error(new Error(err));
-  tracker.relational_db_query("customers", "insert", sql);
+  tracker.relational_query("customers", "insert", sql);
 });
 ```
 * It logs query to file. function for relational databases like MySQL, PostgreSQL
