@@ -26,9 +26,9 @@ const fs = require('fs');
 
 class tracker {
 
-    constructor(inf = {infinity_ : false}) {
+    constructor(app_name = "App", inf = {infinity_ : false}) {
         // console.time("Constr time");
-        this.project_name = (JSON.parse(fs.readFileSync('package.json'))).name || "App";
+        this.project_name = app_name;
         this.json_log = {
             name : this.project_name,
             start : tracker.generate_string_timestamp(),
@@ -83,7 +83,7 @@ class tracker {
         });
     }
 
-    db_connection(dbname) {
+    db(dbname) {
         // console.time("Db conn time");
             this.dbname = dbname;
             this.json_log.db.name = dbname;
@@ -93,7 +93,7 @@ class tracker {
         // console.timeEnd("Db conn time");
     }
 
-    nosqldb_query(table, operation, value, value_updated = null) {
+    nosql_query(table, operation, value, value_updated = null) {
         // console.time("nosql query time");
             try {
                 if(!this.dbname) throw "Set name of database... use .db_connection(dbname) method";
@@ -127,7 +127,7 @@ class tracker {
     }
 
 
-    relational_db_query(table, operation, query) {
+    relational_query(table, operation, query) {
         // console.time("relational query time");
         try {
             if(!this.dbname) throw "Set name of database... use .db_connection(dbname) method";
