@@ -11,15 +11,15 @@
 * tracker.error(actual_error) -> print actual_error --- generate actual_error
 * +] actual_error should be eq 'throw new Error(error)'
 *
-* tracker.db_connection(dbname) -> print dbname connected
+* tracker.db(dbname) -> print dbname connected
 *
-* tracker.relationaldb_query(query) -> print relational query
+* tracker.relational_query(query) -> print relational query
 *
-* tracker.nosqldb_query(operation, value, value_updated) -> print nosql query
+* tracker.nosql_query(operation, value, value_updated) -> print nosql query
 * +] operation -> 'select' 'insert' 'update' 'delete'
 * +] default value_updated is null, it should be set in case of update
 *
-* tracker.custome(msg, type) -> print type : msg
+* tracker.custom(msg, type) -> print type : msg
 * */
 
 const fs = require('fs');
