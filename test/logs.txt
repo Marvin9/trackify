@@ -1,10 +1,10 @@
-[Sun Aug 04 2019 11:38:49] App
+[Sun Aug 04 2019 11:46:53] App
 
-[Sun Aug 04 2019 11:38:49]  started.
-[Sun Aug 04 2019 11:38:49]  GET -> /
-[Sun Aug 04 2019 11:38:50]  GET -> /api/user
-[Sun Aug 04 2019 11:38:50]  MongoDB Connected.
-[Sun Aug 04 2019 11:38:51]  MongoDB : On Table tablename, SELECT -> {"_id":"uniqueid"}
-[Sun Aug 04 2019 11:38:51]  MongoDB : select * from tablename where _id='uniqueid'
-[Sun Aug 04 2019 11:38:52]  Custom type : Custom message
-[Sun Aug 04 2019 11:38:52]  Error: Some error
+[Sun Aug 04 2019 11:46:53]  started.
+[Sun Aug 04 2019 11:46:53]  GET -> /
+[Sun Aug 04 2019 11:46:54]  GET -> /api/user
+[Sun Aug 04 2019 11:46:54]  MongoDB Connected.
+[Sun Aug 04 2019 11:46:55]  MongoDB : On Table tablename, SELECT -> {"_id":"uniqueid"}
+[Sun Aug 04 2019 11:46:55]  MongoDB : select * from tablename where _id='uniqueid'
+[Sun Aug 04 2019 11:46:56]  Custom type : Custom message
+[Sun Aug 04 2019 11:46:56]  Error: Some error
